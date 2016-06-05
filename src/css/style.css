@@ -236,7 +236,7 @@ footer h2{font-size:36px;line-height:42px}
 .tel_gr{display:inline-block;width:200px;margin-top:1px}
 .tel_gr a{font-size:18px;display:inline-block;letter-spacing:1.4px}
 .logo_f{font-size:18px;font-weight:300;background-image:url(../img/logo_f.jpg);background-position-y:bottom;width:148px;height:80px;display:inline-block;margin-top:18px}
-.menu{background-color:rgba(255,255,255,.5);position:absolute;top:75px;left:0;width:419px;height:100vh;z-index:20;padding-left:36px;padding-top:63px;display:none}
+.menu{background-color:rgba(255,255,255,.5);position:absolute;top:75px;left:0;width:419px;height:100vh;z-index:20;padding-left:36px;padding-top:63px;display:none;}
 .menu-a{font-size:18px;color:#292929;height:29px;display:inline-block;width:90%;margin-bottom:7px}
 .menu-a span{margin-left:19px}
 .menu-a.active,.menu-a:active,.menu-a:hover{color:#5fa6e5;text-decoration:underline}
@@ -1159,6 +1159,19 @@ margin-top: 0px;
 }
 .pred_pt span:after {
     top: 4px;
+}
+.menu{
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 54px;
+    padding-left: 18px;
+    padding-top: 20px;
+    width: 100%;
+}
+.menu-a{
+    color: white;
+    font-size: 12px;
+    height: 18px;
+    margin-bottom: 5px;
 }
 }
 

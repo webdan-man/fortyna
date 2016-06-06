@@ -24,20 +24,20 @@ form{text-align:center;font-size:0;margin-bottom:30px;position:relative;z-index:
 textarea{resize:none;border:0;outline:0;display:inline-block;vertical-align:top}
 h2{font-size:40px;text-transform:uppercase;font-weight:300}
 h2 span{font-weight:700}
-#maket{width:100%;height:10448px;background:url(../maket1.jpg) no-repeat top center;opacity:.5;position:absolute;top:0;left:0;z-index:5;display: none;}
+#maket{width:100%;height:10448px;background: url(../maket1.jpg) no-repeat top center;opacity:.5;position:absolute;top:0;left:0;z-index:5;/* display: none; */}
 #mak{width:2659px;height:1000px;background:url(../mak6.jpg) no-repeat right 6px top,#000;opacity:.5;position:absolute;top:8998px;left:0;z-index:5}
 .sec1{background-image:url(../img/bg_sec1.jpg);min-height:778px;position:relative;z-index:2;background-size:cover}
-header{background-color:rgba(255,255,255,.5);min-height:70px;padding-top:16px;padding-bottom:16px}
+header{background-color:rgba(255,255,255,.5);min-height:70px;padding-top:16px;padding-bottom: 11px;}
 .menu_btn{background-image:url(../img/menu_btn.png);width:28px;height:24px;display:block;float:left;margin-top:8px;margin-left:10px}
 .menu_btn.as-close{background-image:url(../img/btn_close.png);width:22px;height:23px;margin-left:13px}
-.logo{background-image:url(../img/logo.png);width:109px;height:43px;display:block;float:left;margin-left:4.5%}
+.logo{background-image:url(../img/logo.png);width:109px;height:43px;display:block;float:left;margin-left: 4.8%;}
 .btn_zz{width:144px;height:34px;display:block;float:right;margin-top:4px;margin-right:.2%;font-size:12px;text-transform:uppercase;font-weight:300;line-height:33px}
 .letter{display:block;float:right;background-image:url(../img/letter.png);background-position-x:left;background-position-y:4px;margin-right:3.4%;margin-top:8px;padding-left:34px;min-height:22px;text-align:right}
 .letter span{border-bottom:1px dashed #585858;font-weight:300;font-size:16px;color:#292929;display:inline-block}
 .letter:hover span{border:none}
-.tel2{font-size:16px;color:#292929;text-transform:uppercase;font-weight:300;display: inline-block;float: right;text-align:right;line-height:13px;/* margin-right:3.5%; */margin-top:13px;}
+.tel2{font-size:16px;color:#292929;text-transform:uppercase;font-weight:300;display: inline-block;float: right;text-align:right;line-height:13px;margin-top:13px;margin-right: 10px;}
 .tel2 span{font-size:10px;color:#2e2e2e;text-transform:none}
-.tel1{font-size:16px;color:#292929;text-transform:uppercase;font-weight:300;display: inline-block;float: right;text-align:right;background-image:url(../img/fone.png);background-position-x:left;background-position-y:2px;min-height:24px;margin-right:.9%;margin-top:9px;padding-left:30px;}
+.tel1{font-size:16px;color:#292929;text-transform:uppercase;font-weight:300;display: inline-block;float: right;text-align:right;background-image:url(../img/fone.png);background-position-x:left;background-position-y:2px;min-height:24px;margin-right: 10px;margin-top:9px;padding-left:30px;}
 .sec1 h2{margin-top:245px;line-height:48px;padding:0 20px}
 .sec1_n{background-color:#fff;min-height:947px;padding-top:261px;background-size:cover}
 .sec1_n h2{color:#292929;font-size:45px;line-height:54px;}
@@ -236,7 +236,7 @@ footer h2{font-size:36px;line-height:42px}
 .tel_gr{display:inline-block;width:200px;margin-top:1px}
 .tel_gr a{font-size:18px;display:inline-block;letter-spacing:1.4px}
 .logo_f{font-size:18px;font-weight:300;background-image:url(../img/logo_f.jpg);background-position-y:bottom;width:148px;height:80px;display:inline-block;margin-top:18px}
-.menu{background-color:rgba(255,255,255,.5);position:absolute;top:75px;left:0;width:419px;height:100vh;z-index:20;padding-left:36px;padding-top:63px;display:none;}
+.menu{background-color:rgba(255,255,255,.5);position:absolute;top: 70px;left:0;width:419px;height:100vh;z-index:20;padding-left:36px;padding-top:63px;/* display:none; */}
 .menu-a{font-size:18px;color:#292929;height:29px;display:inline-block;width:90%;margin-bottom:7px}
 .menu-a span{margin-left:19px}
 .menu-a.active,.menu-a:active,.menu-a:hover{color:#5fa6e5;text-decoration:underline}
@@ -308,8 +308,8 @@ footer h2{font-size:36px;line-height:42px}
     float: right;
     display: inline-block;
     vertical-align: top;
-    width: 290px;
-    margin-right: 3.5%;
+    width: 299px;
+    margin-right: 2.4%;
 }
 .uro_gr_s2,.uro_gr_s3{
     display: inline-block;
@@ -461,7 +461,7 @@ h2{font-size:18px;}
 	header{
     min-height: 50px;
     padding-top: 8px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 }
 
 .logo{
@@ -496,7 +496,7 @@ display: none;
 }
 .tel_grt{
     width: 145px;
-    margin-right: 5.2%;
+    margin-right: 7px;
     background-image: url(../img/fone.png);
     background-position-x: 27px;
     background-position-y: 7px;
@@ -1162,7 +1162,7 @@ margin-top: 0px;
 }
 .menu{
     background-color: rgba(0, 0, 0, 0.8);
-    top: 54px;
+    top: 50px;
     padding-left: 18px;
     padding-top: 20px;
     width: 100%;

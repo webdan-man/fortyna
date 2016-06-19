@@ -1,0 +1,91 @@
+header a:after,
+header a:before,
+header span:after,
+header span:before, {
+    content : none!important;
+    display : none!important;
+}
+.sec1 {
+    background-image : url(img/bg_sec1.jpg);
+    min-height : 900px;
+    -webkit-background-size : cover;
+            background-size : cover;
+}
+.menu.closed {
+    transform : translate3d(-100%,0,0);
+}
+.foto {
+    background-image : url(img/foto.jpg);
+}
+body {
+    font-family : sans-serif;
+}
+.lang-span {
+    display : block;
+    font-size : 16px;
+    float : right;
+    line-height : 38px;
+    margin-left : 20px;
+    color : #292929;
+    margin-top : 2px;
+    margin-right : 10px;
+}
+.lang-a {
+    display : inline;
+}
+.lang-a:hover {
+    text-decoration : underline;
+}
+.lang-span span {
+    display : inline;
+}
+.lang-span span.span {
+    text-decoration : underline;
+    cursor : default;
+}
+.blacked .lang-span {
+    color : white;
+}
+
+@media screen and (max-width: 1200px) {
+    .lang-span {
+        float : left;
+        margin-bottom : 4px;
+        margin-left : 10px;
+        margin-right : 0;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 500px) {
+    .letter {
+        display : none!important;
+    }
+    .lang-span {
+        line-height : 30px;
+    }
+    .sec1 {
+        background-image : url(img/m_bg1.jpg)!important;
+        background-position : top center!important;
+    }
+    .sec2 {
+        margin-top : 0!important;
+    }
+}
+@media screen and (max-width: 400px) {
+    .logo {
+        margin-left : 6px!important;
+    }
+    .lang-span {
+        font-size : 12px;
+    }
+    .tel_grt {
+        width : 140px!important;
+        background-image : none!important;
+    }
+}
+@media screen and (max-width: 900px) {
+    .letter {
+        float : left!important;
+        margin-left : 12px;
+        margin-right : 0!important;
+    }
+}

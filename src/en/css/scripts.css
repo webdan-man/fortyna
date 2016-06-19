@@ -1,0 +1,338 @@
+.menu.closed {
+    transform : translate3d(-100%,0,0);
+}
+.menu_btn:hover {
+    transform : rotate(-180deg);
+}
+.kli_gr:hover > div {
+    /* width : 25%; */
+    /* overflow : hidden; */
+}
+.kli_gr > div:hover {
+    width : 50%;
+}
+header.blacked {
+    background-color : rgba(0, 0, 0, 0.8);
+}
+header.blacked .menu_btn {
+    -webkit-filter : brightness(270%);
+            filter : brightness(270%);
+}
+header.blacked .tel_grt,
+header.blacked .letter {
+    -webkit-filter : invert(100%) contrast(300%);
+}
+header.blacked .btn_zz {
+    color : white;
+    border : 1px solid white!important;
+}
+.menu.blacked {
+    background-color : rgba(0, 0, 0, 0.8);
+}
+.menu.blacked .menu-a {
+    color : white;
+}
+.popap.p_type1 {
+            transform : scale(0.5) perspective(1000px) rotateX(40deg);
+    -webkit-transform : scale(0.5) perspective(1000px) rotateX(-40deg);
+    opacity : 0;
+    transition : all 0.6s ease 0s;
+    padding-bottom : 40px;
+}
+.popap.p_type1.opened {
+            transform : scale(1) perspective(1000px) rotateX(0deg);
+    -webkit-transform : scale(1) perspective(1000px) rotateX(0deg);
+    opacity : 1;
+    /* transition: 0.6s ease 0s, opacity 0.6s ease 0s; */
+}
+.arcticmodal-container,
+.arcticmodal-overlay {
+    position : fixed;
+    left : 0;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    z-index : 1000;
+}
+.arcticmodal-container {
+    overflow : auto;
+    margin : 0;
+    padding : 0;
+    border : 0;
+    border-collapse : collapse;
+    overflow-x : hidden;
+}
+:first-child + html .arcticmodal-container {
+    height : 100%;
+}
+.arcticmodal-container_i {
+    margin : 0 auto;
+    height : 100%;
+}
+.arcticmodal-container_i2 {
+    padding : 0;
+    margin : 0;
+    border : 0;
+    vertical-align : middle;
+    position : relative;
+}
+.close:hover {
+    transform : rotate(-180deg);
+}
+body.overflow-hidden {
+    overflow : hidden!important;
+    margin-right : 16px!important;
+}
+body.overflow-hidden header {
+    padding-right : 16px;
+}
+#bgvid {
+    position : absolute;
+    z-index : 1;
+    top : 50%;
+    left : 50%;
+    min-width : 100%;
+    min-height : 100%;
+    width : auto;
+    height : auto;
+    z-index : -100;
+        -ms-transform : translateX(-50%) translateY(-50%);
+       -moz-transform : translateX(-50%) translateY(-50%);
+    -webkit-transform : translateX(-50%) translateY(-50%);
+            transform : translateX(-50%) translateY(-50%);
+    background : url(../img/bg_sec1.jpg) no-repeat;
+    background-size : cover;
+}
+.first-trans {
+    -webkit-transition-timing-function : cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function : cubic-bezier(0.7,0,0.3,1);
+    -webkit-transition-duration : 0.8s;
+            transition-duration : 0.8s;
+}
+.sec1_n .sec1_n_m {
+    height : 100%;
+}
+.sec1 p {
+    position : relative;
+    z-index : 2;
+    font-size : 24px;
+    color : rgba(41,41,41,0.8);
+    margin-top : 17px;
+    line-height : 36px;
+    opacity : 0;
+}
+.sec1 p span {
+    font-size : 24px;
+    color : rgba(41,41,41,0.8);
+    font-weight : 300;
+    margin-top : 43px;
+    display : inline-block;
+}
+.sld1 li img {
+    vertical-align : middle;
+    line-height : 20px;
+}
+.sld1 li img.gazprom {
+    position : relative;
+    top : -5px;
+}
+footer .wrap {
+    padding : 0 1%;
+}
+.sld_r a,
+.sld_l a,
+.sldo_l a,
+.sldo_r a {
+    display : block;
+    color : transparent;
+    font-size : 0;
+    position : relative;
+    width : 100%;
+    height : 100%;
+}
+.sec1_n .btn_sec1_n {
+    opacity : 1;
+}
+.sec1_n .shape1 {
+    opacity : 1;
+}
+
+.popap.p_type2 {
+            transform : scale(0.5) perspective(1000px) rotateY(40deg);
+    -webkit-transform : scale(0.5) perspective(1000px) rotateY(40deg);
+    opacity : 0;
+    transition : all 0.6s ease 0s;
+    padding-bottom : 56px;
+    overflow : hidden;
+    width : 100%;
+    height : 100vh;
+    position : relative;
+}
+.popap.p_type2.opened {
+            transform : scale(1) perspective(1000px) rotateY(0deg);
+    -webkit-transform : scale(1) perspective(1000px) rotateY(0deg);
+    opacity : 1;
+    /* transition: 0.6s ease 0s, opacity 0.6s ease 0s; */
+}
+.sld2 img {
+    max-width : 100%;
+    vertical-align : middle;
+    display : inline-block;
+}
+.otel_t h2 {
+    line-height : 56px;
+    padding : 0;
+}
+.kli2 .bg {
+    background-image : url(../img/kli2.jpg);
+}
+.kli1 .bg,
+.kli2 .bg,
+.kli3 .bg {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    background-size : auto 100%;
+    -webkit-filter : blur(0);
+    transition : all 0.25s;
+    transform : scale(1);
+}
+.kli1 .bg {
+    background-image : url(../img/kli1.jpg);
+}
+.kli3 .bg {
+    background-image : url(../img/kli3.jpg);
+}
+.kli1:hover .bg,
+.kli2:hover .bg,
+.kli3:hover .bg {
+    /* -webkit-filter : blur(3px); */
+    /* transform : scale(1.1); */
+}
+@media screen and (max-width:1024px) {
+    .otel_t h2 {
+        font-size : 48px;
+        line-height : 36px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .ot_wrap {
+        display : block;
+        /* margin-top: 20px; */
+        width : 100%;
+        padding-left : 10px;
+        padding-right : 10px;
+    }
+    .otel_t {
+        padding-left : 0;
+    }
+    .popap.p_type2 {
+        min-height : 100vh;
+        height : 100%;
+        /* padding-left: 10px; */
+        /* padding-right: 10px; */
+        width : 100%;
+        max-width : 100vw;
+    }
+    .pop_type2_w {
+        position : static!important;
+        transform : none!important;
+    }
+    .kli_gr > div {
+        width : 100%!important;
+        /* flex: 1 2!important; */
+        /* -webkit-flex: 2 2!important; */
+        /* min-width: 300px!important; */
+    }
+    .kli1 {
+        min-width : 100%!important;
+    }
+    .kli2 {
+        /* display: block; */
+        /* min-width: 300px!important; */
+    }
+    .kli3 {
+        /* float: right!important; */
+    }
+}
+.sld2_w {
+    width : 100%;
+}
+.pop_type2_w {
+    width : 100%;
+    max-width : 1920px;
+    position : absolute;
+    left : 50%;
+    top : 50%;
+    transform : translate3d(-50%,-50%,0);
+}
+.sec4 .bx-viewport {
+    overflow : visible!important;
+}
+
+.popap2.p_type3 {
+            transform : scale(0.5) perspective(1000px) rotateY(40deg);
+    -webkit-transform : scale(0.5) perspective(1000px) rotateY(40deg);
+    opacity : 0;
+    transition : all 0.6s ease 0s;
+}
+.popap2.p_type3.opened {
+            transform : scale(1) perspective(1000px) rotateY(0deg);
+    -webkit-transform : scale(1) perspective(1000px) rotateY(0deg);
+    opacity : 1;
+    /* transition: 0.6s ease 0s, opacity 0.6s ease 0s; */
+}
+.close2:hover {
+    transform : rotate(-180deg);
+}
+#otel1 form {
+    text-align : left;
+}
+.fancybox-close {
+    background-image : url(../img/close.png);
+    background-size : initial;
+    top : 5px;
+    right : 5px;
+}
+.fancybox-skin {
+    border-radius : 0;
+}
+#okgo {
+    max-width : 400px;
+    padding-bottom : 60px;
+}
+
+
+@media screen and (max-width:500px) {
+    #okgo {
+        max-width : 280px;
+        padding-bottom : 25px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .kli2 {
+        /* display: block; */
+        min-width : 100%!important;
+    }
+    .kli3 {
+        /* float: right!important; */
+        min-width : 100%!important;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 500px) {
+    .letter {
+        display : none!important;
+    }
+    .lang-span {
+        line-height : 30px;
+    }
+    .sec1 {
+        background-image : url(../img/m_bg1.jpg)!important;
+        background-position : top center!important;
+    }
+    .sec2 {
+        margin-top : 0!important;
+    }
+}

@@ -11,7 +11,6 @@
         <meta content="img/og_image.jpg" property="og:image">
         <meta content property="og:description">
         <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
-        <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
         <style>
             <?php include('css/head.css');
             ?>

@@ -797,16 +797,18 @@ header {
 }
 .kli_gr {
     width : 100%;
-    min-height : 562px;
-    display :         flex;
-    display : -webkit-flex;
-            align-items : stretch;
-            flex-flow : row wrap;
-    -webkit-align-items : stretch;
-    -webkit-flex-flow : row wrap;
-            justify-content : space-between;
-    -webkit-justify-content : space-between;
+    /* min-height : 562px; */
+    display: flex;
+    display: -webkit-flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    flex-direction: row;
 }
+.kli_gr:before,.kli_gr:after,.kli_gr *:before,.kli_gr *:after{content:none;}
 .kli_gr .kli1:after,
 .kli_gr .kli2:after,
 .kli_gr .kli3:after {
@@ -829,16 +831,17 @@ header {
     /* width : 33.33%; */
     height : 562px;
     -webkit-filter : grayscale(100%);
-            filter : grayscale(100%);
+    filter : grayscale(100%);
     position : relative;
     vertical-align : top;
     -webkit-transition : all 0.25s;
-            transition : all 0.5s;
+    transition : all 0.5s;
     background-position : top center;
     background-size : auto 100%;
-            flex : 1 1;
-    -webkit-flex : 1 1;
-    min-width : 25%;
+    flex : 1 1;
+    -webkit-flex: 1 1;
+    /* min-width : 25%; */
+    /* max-width: 50%; */
     cursor : pointer;
 }
 .kli1 {
@@ -993,14 +996,16 @@ header {
 .kli_gr .kli2:hover,
 .kli_gr .kli3:hover {
     -webkit-filter : grayscale(0);
-            filter : grayscale(0);
+    filter : grayscale(0);
     /* background-size: cover; */
     background-size : auto 110%;
     /* background-position: top center; */
     /* -webkit-filter: blur(5px); */
     /* background-position-y: center; */
-            flex : 2 1;
-    -webkit-flex : 2 1;
+    flex : 2 1;
+    -webkit-flex: 2 1;
+    /* min-width: 50%; */
+    transition: all 0.5s;
 }
 .sec6 {
     background-image : url(../img/bg_sec6.jpg);
@@ -3387,5 +3392,4 @@ button:hover:after,
         font-size : 12px;
         height : 18px;
         margin-bottom : 5px;
-    }
-}
+  

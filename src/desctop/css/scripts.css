@@ -246,21 +246,15 @@ footer .wrap {
         position : static!important;
         transform : none!important;
     }
-    .kli_gr > div {
-        width : 100%!important;
+    .kli_gr{
+        /* height:1124px; */
+    }
+    .kli_gr > div:hover {
+        /* width : 100%!important; */
         /* flex: 1 2!important; */
         /* -webkit-flex: 2 2!important; */
         /* min-width: 300px!important; */
-    }
-    .kli1 {
-        min-width : 100%!important;
-    }
-    .kli2 {
-        /* display: block; */
-        /* min-width: 300px!important; */
-    }
-    .kli3 {
-        /* float: right!important; */
+        flex: 4 1!important;
     }
 }
 .sld2_w {
@@ -319,6 +313,19 @@ footer .wrap {
 }
 
 @media screen and (max-width:599px) {
+    .kli_gr{display:block}
+    .kli_gr>div:after,.kli_gr>div:before{
+        content: '';
+    }
+    .kli_gr>div{
+        display:block;
+        width:100%!important;
+        float: left;
+    }
+    .kli_gr>div:hover{
+        display:block;
+        width:100%!important;
+    }
     .kli2 {
         /* display: block; */
         min-width : 100%!important;

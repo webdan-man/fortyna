@@ -685,8 +685,7 @@
                     <a href="tel:+74955182205">+7 (495)518-22-05</a>
                     <a href="tel:+79255182205">+7 (925) 518-22-05</a>
                 </div>
-                <span class="cont">119334<br> Ленинский проспект<br> ГОК "Спутник"<br> дом 38 офис 1415<br> ООО "Фортуна Отель Сервис".<br> Телефон/факс:
-                    <br>+7 495 9261059<br>+ 7 925 5054015
+                <span class="cont">119334 <br> Leninsky Prospekt <br> GOK "Sputnik " <br> house 38 office 1415 <br> "Fortuna Hotel Services". <br> Phone / Fax : +7 495 9261059 <br> <br> + 7 925 5054015
                 </span>
                 <div class="clear"></div>
                 <a class="logo_f" href="http://sdcreative.ru/" target="_blank">Site developed by:</a>

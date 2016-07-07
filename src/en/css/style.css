@@ -210,8 +210,7 @@ header {
     display : block;
     float : right;
     background-image : url(../img/letter.png);
-    background-position-x : left;
-    background-position-y : 6px;
+    background-position: left 6px;
     margin-right : 3.4%;
     margin-top : 1px;
     padding-left : 34px;
@@ -258,8 +257,7 @@ header {
     line-height : 20px;
     text-align : right;
     background-image : url(../img/fone.png);
-    background-position-x : left;
-    background-position-y : 2px;
+    background-position: left 2px;
     min-height : 24px;
     margin-right : 10px;
     margin-top : 9px;
@@ -692,7 +690,7 @@ header {
     font-weight : 700;
     position : absolute;
     background-image : url(../img/plus.png);
-    background-position-y : top;
+    background-position: top;
     width : 80px;
     padding-top : 42px;
     left : 50%;
@@ -797,16 +795,18 @@ header {
 }
 .kli_gr {
     width : 100%;
-    min-height : 562px;
-    display :         flex;
-    display : -webkit-flex;
-            align-items : stretch;
-            flex-flow : row wrap;
-    -webkit-align-items : stretch;
-    -webkit-flex-flow : row wrap;
-            justify-content : space-between;
-    -webkit-justify-content : space-between;
+    /* min-height : 562px; */
+    display: flex;
+    display: -webkit-flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    flex-direction: row;
 }
+.kli_gr:before,.kli_gr:after,.kli_gr *:before,.kli_gr *:after{content:none;}
 .kli_gr .kli1:after,
 .kli_gr .kli2:after,
 .kli_gr .kli3:after {
@@ -829,21 +829,22 @@ header {
     /* width : 33.33%; */
     height : 562px;
     -webkit-filter : grayscale(100%);
-            filter : grayscale(100%);
+    filter : grayscale(100%);
     position : relative;
     vertical-align : top;
     -webkit-transition : all 0.25s;
-            transition : all 0.5s;
+    transition : all 0.5s;
     background-position : top center;
     background-size : auto 100%;
-            flex : 1 1;
-    -webkit-flex : 1 1;
-    min-width : 25%;
+    flex : 1 1;
+    -webkit-flex: 1 1;
+    /* min-width : 25%; */
+    /* max-width: 50%; */
     cursor : pointer;
 }
 .kli1 {
     /* background-image : url(../img/kli1.jpg); */
-    background-position-y : top;
+    background-position: top;
 }
 .kli2 {
     background-image : url(../img/kli2.jpg);
@@ -916,7 +917,7 @@ header {
     text-decoration : underline;
     text-transform : uppercase;
     background-image : url(../img/go-to.png);
-    background-position-x : 187px;
+    background-position: 187px;
     display : inline-block;
     text-align : left;
     float : left;
@@ -993,14 +994,16 @@ header {
 .kli_gr .kli2:hover,
 .kli_gr .kli3:hover {
     -webkit-filter : grayscale(0);
-            filter : grayscale(0);
+    filter : grayscale(0);
     /* background-size: cover; */
     background-size : auto 110%;
     /* background-position: top center; */
     /* -webkit-filter: blur(5px); */
     /* background-position-y: center; */
-            flex : 2 1;
-    -webkit-flex : 2 1;
+    flex : 2 1;
+    -webkit-flex: 2 1;
+    /* min-width: 50%; */
+    transition: all 0.5s;
 }
 .sec6 {
     background-image : url(../img/bg_sec6.jpg);
@@ -1313,22 +1316,22 @@ form button {
 }
 .input_gr5 input {
     background-image : url(../img/zaezd.png);
-    background-position-x : 15px;
+    background-position: 15px;
     padding-left : 47px!important;
 }
 .input_gr6 input {
     background-image : url(../img/viezd.png);
-    background-position-x : 15px;
+    background-position: 15px;
     padding-left : 47px!important;
 }
 .pit {
     background-image : url(../img/pitanie.png);
-    background-position-x : left;
+    background-position: left;
     min-height : 27px;
 }
 .trans {
     background-image : url(../img/transfer.png);
-    background-position-x : left;
+    background-position: left;
     min-height : 17px;
 }
 .sec7 .left form a,
@@ -1574,8 +1577,7 @@ form button {
     position : relative;
     z-index : 2;
     background-image : url(../img/baggage.jpg);
-    background-position-x : -1.6%;
-    background-position-y : bottom;
+    background-position: -1.6% bottom;
 }
 .dubl {
     display : inline-block;
@@ -1738,7 +1740,7 @@ footer h2 {
     font-size : 18px;
     font-weight : 300;
     background-image : url(../img/logo_f.jpg);
-    background-position-y : bottom;
+    background-position: bottom;
     width : 148px;
     height : 80px;
     display : inline-block;
@@ -2243,7 +2245,7 @@ button:hover:after,
         /* cursor : pointer; */
     }
     .sec9 {
-        background-position-x : -10%;
+        background-position: -10%;
     }
     .sec7 .right h2 {
         margin : 0 0 16px;
@@ -2315,7 +2317,7 @@ button:hover:after,
         margin-left : 0;
     }
     .sec9 {
-        background-position-x : -20%;
+        background-position: -20%;
     }
     .shape1 {
         display : none;
@@ -2335,7 +2337,7 @@ button:hover:after,
         margin : 0 1%;
     }
     .sec9 {
-        background-position-x : 135%;
+        background-position: 135%;
     }
     .dubl {
         float : left;
@@ -2352,7 +2354,7 @@ button:hover:after,
         text-align : center;
     }
     .sec9 {
-        background-position-x : 170%;
+        background-position: 170%;
     }
     .sec2 h3 {
         width : 90%;
@@ -2395,7 +2397,7 @@ button:hover:after,
         width : 75%;
     }
     .sec9 {
-        background-position-x : 400px;
+        background-position: 400px;
     }
     .uro_gr_b .uro {
         margin : 0 4%;
@@ -2444,7 +2446,7 @@ button:hover:after,
         margin : 0 1.6%;
     }
     .sec9 {
-        background-position-x : 300px;
+        background-position: 300px;
     }
     .btn_sec1_n {
         width : 90%;
@@ -2496,7 +2498,7 @@ button:hover:after,
         margin : 2% 1%;
     }
     .sec9 {
-        background-position-x : 250px;
+        background-position: 250px;
     }
     .sec2 h2 {
         width : 100%;
@@ -2630,8 +2632,7 @@ button:hover:after,
         width : 165px;
         margin-right : 0;
         background-image : url(../img/fone.png);
-        background-position-x : 0;
-        background-position-y : 8px;
+        background-position: 0 8px;
         background-size : 12%;
         min-height : 36px;
     }
@@ -2689,7 +2690,7 @@ button:hover:after,
         width : 100%;
         height : 276px;
         margin : 0;
-        background-position-y : -10px;
+        background-position: -10px;
     }
     .foto_gr {
         margin : 0;
@@ -2876,7 +2877,7 @@ button:hover:after,
         opacity : 1;
         margin-left : 29px;
         font-size : 13px;
-        background-position-x : 149px;
+        background-position: 149px;
     }
     .sec6 {
         padding-top : 37px;
@@ -3086,7 +3087,7 @@ button:hover:after,
         padding-top : 1px;
     }
     .pit {
-        background-position-x : left;
+        background-position: left;
         min-height : 23px;
         background-size : contain;
     }
@@ -3189,7 +3190,7 @@ button:hover:after,
     }
     .sec9 {
         min-height : 322px;
-        background-position-x : 165px;
+        background-position: 165px;
         background-size : 101%;
     }
     .sec9 .dubl h2 {

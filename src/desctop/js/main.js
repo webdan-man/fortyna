@@ -838,8 +838,6 @@ $(document).ready(function() {
     init_sec4();
     init_menu();
 
-
-});
 $(window).resize(function() {
     if (!isMobile) {
         init_firts_block();
@@ -849,4 +847,6 @@ $(window).resize(function() {
     init_sec4();
     init_menu();
     console.log('resize');
+});
+
 });

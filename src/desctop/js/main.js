@@ -182,7 +182,7 @@ $(document).ready(function() {
                 console.log('pop-sld.prev')
             },
             onSliderLoad: function() {
-                init_pop_sld(element);
+                setTimeout(init_pop_sld(element), 500);
             }
         });
         //$('.arcticmodal-container_i2').find('.popap.p_type2.opened').width('100vw')
@@ -543,72 +543,43 @@ $(document).ready(function() {
 
 
 
+    function init_menu() {
+        header_height = $('header').outerHeight();
+        console.log(header_height);
+        $('.menu').css('top', header_height + 'px');
+    }
 
+    function init_firts_block_mobile() {
+        $(window).scroll(function() {
 
+            $('#sec1').removeClass('notrans');
+            if ($('body').scrollTop() > 0) {
+                $('#sec1').addClass('sec1_n');
+                $('header,.menu').addClass('blacked');
 
-    //inits
-    init_firts_block();
-    init_sec4();
-    init_menu();
+            } else {
+                $('#sec1').removeClass('sec1_n');
+                $('header,.menu').removeClass('blacked');
+            }
+        });
 
-
-});
-$(window).scroll(function() {
-    //section 1 animation
-
-    //blacked head&menu
-    //$('section').each(function(index, el) {
-    //  //var top_w  = $(window).scrollTop() - $(window).height()*index;
-    //  var bot_w  = $(window).scrollTop() - $(el).offset().top;
-    //  
-    //  if (bot_w >= 0 && bot_w <= $(window).height()) {
-    //    if (index > 0) {
-    //      $('header,.menu').addClass('blacked');
-    //    }else{
-    //      $('header,.menu').removeClass('blacked');
-    //    }
-    //  }
-    //});
-
-
-});
-
-$(window).resize(function() {
-    init_firts_block();
-    init_sec4();
-    init_menu();
-    console.log('resize');
-});
-var slider_destroy = 0;
-
-function init_menu() {
-    header_height = $('header').outerHeight();
-    console.log(header_height);
-    $('.menu').css('top', header_height + 'px');
-}
-
-function init_sec4() {
-    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
-
-
-    if (width <= 610) {
-        if (typeof sec4_slider === 'undefined') {
-            sec4_slider = $('.sec4_bx-wrap').bxSlider({
-                infiniteLoop: false,
-                controls: false,
-                pager: true,
-                pagerCustom: '.eli_gro',
-                auto: false,
-                speed: 500,
-                minSlides: 1,
-                maxSlides: 1,
-                moveSlides: 1,
-                onSlideNext: function($slideElement, oldIndex, newIndex) {},
-                onSlidePrev: function($slideElement, oldIndex, newIndex) {},
-                onSliderLoad: function() {}
-            });
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        if (width >= 501) {
+            $('#sec1').addClass('notrans');
+            $('#sec1').addClass('sec1_n');
+            $('header,.menu').addClass('blacked');
         } else {
+            $(window).unbind('scroll');
+            $('header,.menu').addClass('blacked');
+        }
+    }
+    var slider_destroy = 1;
+
+    function init_sec4() {
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+
+        if (width <= 610) {
             if (slider_destroy == 1) {
                 sec4_slider = $('.sec4_bx-wrap').bxSlider({
                     infiniteLoop: false,
@@ -626,231 +597,256 @@ function init_sec4() {
                 });
                 slider_destroy = 0;
             }
-        }
-    } else {
-        if (typeof sec4_slider !== 'undefined') {
-            sec4_slider.destroySlider();
-            slider_destroy = 1;
-        };
-    }
-}
-
-
-
-
-function init_firts_block() {
-
-    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    console.log('width=' + width);
-
-
-
-
-
-
-    // detect if IE : from http://stackoverflow.com/a/16657946		
-    var ie = (function() {
-        var undef, rv = -1; // Return value assumes failure.
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf('MSIE ');
-        var trident = ua.indexOf('Trident/');
-
-        if (msie > 0) {
-            // IE 10 or older => return version number
-            rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-        } else if (trident > 0) {
-            // IE 11 (or newer) => return version number
-            var rvNum = ua.indexOf('rv:');
-            rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
-        }
-
-        return ((rv > -1) ? rv : undef);
-    }());
-
-
-    // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
-    // left: 37, up: 38, right: 39, down: 40,
-    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    var keys = [32, 37, 38, 39, 40],
-        wheelIter = 0;
-
-    function preventDefault(e) {
-        e = e || window.event;
-        if (e.preventDefault)
-            e.preventDefault();
-        e.returnValue = false;
-    }
-
-    function keydown(e) {
-        for (var i = keys.length; i--;) {
-            if (e.keyCode === keys[i]) {
-                preventDefault(e);
-                return;
-            }
-        }
-    }
-
-    function touchmove(e) {
-        preventDefault(e);
-    }
-
-    function touchstart(e) {
-        preventDefault(e);
-    }
-
-    function wheel(e) {
-        // for IE 
-        //if( ie ) {
-        //preventDefault(e);
-        //}
-    }
-
-    function disable_scroll() {
-        window.onmousewheel = document.onmousewheel = wheel;
-        document.onkeydown = keydown;
-        document.body.ontouchmove = touchmove;
-        document.body.ontouchstart = touchstart;
-    }
-
-    function enable_scroll() {
-        window.onmousewheel = document.body.ontouchstart = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
-    }
-
-    var docElem = window.document.documentElement,
-        scrollVal,
-        isRevealed,
-        noscroll,
-        isAnimating,
-        container = document.getElementById('sec1');
-    //trigger = container.querySelector( 'button.trigger' );
-
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
-
-    function scrollPage() {
-        scrollVal = scrollY();
-
-        if (noscroll && !ie) {
-            if (scrollVal < 0) return false;
-            // keep it that way
-            window.scrollTo(0, 0);
-        }
-
-        if ($(container).hasClass('notrans')) {
-            $(container).removeClass('notrans');
-            return false;
-        }
-
-        if (isAnimating) {
-            return false;
-        }
-
-        if (scrollVal <= 0 && isRevealed) {
-            toggle(0);
-        } else if (scrollVal > 0 && !isRevealed) {
-            toggle(1);
-        }
-    }
-
-    function toggle(reveal) {
-        isAnimating = true;
-
-        if (reveal) {
-            $(container).addClass('sec1_n');
-            $('header,.menu').addClass('blacked');
-            //classie.add( container, 'modify' );
         } else {
-            if (!isMobile) {
-                noscroll = true;
+            if (typeof sec4_slider !== 'undefined') {
+                sec4_slider.destroySlider();
+                slider_destroy = 1;
+            };
+        }
+    }
+
+
+
+
+    function init_firts_block() {
+
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        console.log('width=' + width);
+
+
+
+
+
+
+        // detect if IE : from http://stackoverflow.com/a/16657946      
+        var ie = (function() {
+            var undef, rv = -1; // Return value assumes failure.
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf('MSIE ');
+            var trident = ua.indexOf('Trident/');
+
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            } else if (trident > 0) {
+                // IE 11 (or newer) => return version number
+                var rvNum = ua.indexOf('rv:');
+                rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
             }
-            disable_scroll();
-            $(container).removeClass('sec1_n');
-            $('header,.menu').removeClass('blacked');
-            //classie.remove( container, 'modify' );
+
+            return ((rv > -1) ? rv : undef);
+        }());
+
+
+        // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179                  
+        // left: 37, up: 38, right: 39, down: 40,
+        // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+        var keys = [32, 37, 38, 39, 40],
+            wheelIter = 0;
+
+        function preventDefault(e) {
+            e = e || window.event;
+            if (e.preventDefault)
+                e.preventDefault();
+            e.returnValue = false;
         }
 
-        // simulating the end of the transition:
-        setTimeout(function() {
-            isRevealed = !isRevealed;
-            isAnimating = false;
+        function keydown(e) {
+            for (var i = keys.length; i--;) {
+                if (e.keyCode === keys[i]) {
+                    preventDefault(e);
+                    return;
+                }
+            }
+        }
+
+        function touchmove(e) {
+            preventDefault(e);
+        }
+
+        function touchstart(e) {
+            preventDefault(e);
+        }
+
+        function wheel(e) {
+            // for IE 
+            //if( ie ) {
+            //preventDefault(e);
+            //}
+        }
+
+        function disable_scroll() {
+            window.onmousewheel = document.onmousewheel = wheel;
+            document.onkeydown = keydown;
+            document.body.ontouchmove = touchmove;
+            document.body.ontouchstart = touchstart;
+        }
+
+        function enable_scroll() {
+            window.onmousewheel = document.body.ontouchstart = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
+        }
+
+        var docElem = window.document.documentElement,
+            scrollVal,
+            isRevealed,
+            noscroll,
+            isAnimating,
+            container = document.getElementById('sec1');
+        //trigger = container.querySelector( 'button.trigger' );
+
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+
+        function scrollPage() {
+            scrollVal = scrollY();
+
+            if (noscroll && !ie) {
+                if (scrollVal < 0) return false;
+                // keep it that way
+                window.scrollTo(0, 0);
+            }
+
+            if ($(container).hasClass('notrans')) {
+                $(container).removeClass('notrans');
+                return false;
+            }
+
+            if (isAnimating) {
+                return false;
+            }
+
+            if (scrollVal <= 0 && isRevealed) {
+                toggle(0);
+            } else if (scrollVal > 0 && !isRevealed) {
+                toggle(1);
+            }
+        }
+
+        function toggle(reveal) {
+            isAnimating = true;
+
             if (reveal) {
+                $(container).addClass('sec1_n');
+                $('header,.menu').addClass('blacked');
+                //classie.add( container, 'modify' );
+            } else {
                 if (!isMobile) {
-                    noscroll = false;
+                    noscroll = true;
                 }
-                enable_scroll();
+                disable_scroll();
+                $(container).removeClass('sec1_n');
+                $('header,.menu').removeClass('blacked');
+                //classie.remove( container, 'modify' );
             }
-        }, 600);
-    }
 
-    // refreshing the page...
-    var pageScroll = scrollY();
-    if (!isMobile) {
-        noscroll = pageScroll === 0;
-    }
-
-    //disable_scroll();
-
-
-
-
-
-
-    //trigger.addEventListener('click', function() {
-    //    toggle('reveal');
-    //});
-
-
-    if (width >= 501) {
-
-
-        if (pageScroll) {
-            isRevealed = true;
-            $(container).addClass('notrans');
-            $(container).addClass('sec1_n');
-            $('header,.menu').addClass('blacked');
-            //classie.add( container, 'notrans' );
-            //classie.add( container, 'modify' );
+            // simulating the end of the transition:
+            setTimeout(function() {
+                isRevealed = !isRevealed;
+                isAnimating = false;
+                if (reveal) {
+                    if (!isMobile) {
+                        noscroll = false;
+                    }
+                    enable_scroll();
+                }
+            }, 600);
         }
 
-        disable_scroll();
+        // refreshing the page...
+        var pageScroll = scrollY();
+        if (!isMobile) {
+            noscroll = pageScroll === 0;
+        }
 
-        //window.addEventListener('scroll',scrollPage,true);
-        $(window).scroll(scrollPage);
-        console.log('scrollPage_binded');
+        //disable_scroll();
 
-        accept_swipe = 1;
 
-        $('#sec1').swipe({
-            swipe: function(event, direction) {
-                if (direction == 'up' && $(window).scrollTop() == 0) {
-                    if (accept_swipe == 1) {
-                        toggle(1);
+
+
+
+
+        //trigger.addEventListener('click', function() {
+        //    toggle('reveal');
+        //});
+
+
+        if (width >= 501) {
+
+
+            if (pageScroll) {
+                isRevealed = true;
+                $(container).addClass('notrans');
+                $(container).addClass('sec1_n');
+                $('header,.menu').addClass('blacked');
+                //classie.add( container, 'notrans' );
+                //classie.add( container, 'modify' );
+            }
+
+            disable_scroll();
+
+            //window.addEventListener('scroll',scrollPage,true);
+            $(window).scroll(scrollPage);
+            console.log('scrollPage_binded');
+
+            accept_swipe = 1;
+
+            $('#sec1').swipe({
+                swipe: function(event, direction) {
+                    if (direction == 'up' && $(window).scrollTop() == 0) {
+                        if (accept_swipe == 1) {
+                            toggle(1);
+                        }
+                        console.log('up');
+                        //enable_scroll();
                     }
-                    console.log('up');
-                    //enable_scroll();
-                }
-                if (direction == 'down' && $(window).scrollTop() == 0) {
-                    if (accept_swipe == 1) {
-                        toggle(0);
+                    if (direction == 'down' && $(window).scrollTop() == 0) {
+                        if (accept_swipe == 1) {
+                            toggle(0);
+                        }
+                        console.log('down');
+                        //enable_scroll();
                     }
-                    console.log('down');
-                    //enable_scroll();
-                }
-            },
-            allowPageScroll: "vertical",
-            excludedElements: []
-        });
+                },
+                allowPageScroll: "vertical",
+                excludedElements: []
+            });
 
-    } else {
+        } else {
 
 
-        $('header,.menu').addClass('blacked');
+            $('header,.menu').addClass('blacked');
 
-        $(window).unbind('scroll');
-        console.log('scrollPage_unbinded');
-        enable_scroll();
-        $("#sec1").swipe("destroy");
-        accept_swipe = 0;
+            $(window).unbind('scroll');
+            console.log('scrollPage_unbinded');
+            enable_scroll();
+            $("#sec1").swipe("destroy");
+            accept_swipe = 0;
+        }
     }
-}
+
+
+
+
+
+    //inits
+    if (!isMobile) {
+        init_firts_block();
+    } else {
+        init_firts_block_mobile();
+    }
+    init_sec4();
+    init_menu();
+
+
+});
+$(window).resize(function() {
+    if (!isMobile) {
+        init_firts_block();
+    } else {
+        init_firts_block_mobile();
+    }
+    init_sec4();
+    init_menu();
+    console.log('resize');
+});

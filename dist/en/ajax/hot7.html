@@ -47,14 +47,20 @@
                 <h2>Akademicheskaya</h2>
                 <p class="adr">Address: Str. Don, 1, Bldg. 2, Moscow</p>
                 <form action="ajax/mail.php" method="post" id="pop-form">
-                    <input name="frmid" type="hidden" value="Узнать подробнее о готеле Академическая">
+                    <input name="frmid" type="hidden" value="Узнать о наличии мест о готеле Академическая">
                     <input name="event" type="hidden" value="s_frm_hot7">
                     <input name="name" type="text" placeholder="Your name">
                     <input name="phone" type="text" placeholder="Your phone number">
-                    <button type="submit" value="Learn more">Learn more</button>
+                    <button type="submit" value="Consult availability">Consult availability</button>
                 </form>
             </div>
         </div>
-        <style>.otel_t h2{font-size: 62px}</style>
+        <style>.otel_t h2{font-size: 62px}
+        @media screen and (max-width: 1024px){
+            .otel_t h2 {
+                font-size: 40px;
+                line-height: 36px;
+            }
+        }</style>
     </div>
 </div>

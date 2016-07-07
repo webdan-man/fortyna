@@ -68,6 +68,7 @@ header.blacked .btn_zz {
 .arcticmodal-container_i {
     margin : 0 auto;
     height : 100%;
+    position : relative;
 }
 .arcticmodal-container_i2 {
     padding : 0;
@@ -215,7 +216,12 @@ footer .wrap {
         line-height : 36px;
     }
 }
-
+@media screen and (max-width:500px) {
+    .otel_t h2 {
+        font-size : 30px;
+        line-height : 30px;
+    }
+}
 @media screen and (max-width:768px) {
     .ot_wrap {
         display : block;
@@ -234,6 +240,7 @@ footer .wrap {
         /* padding-right: 10px; */
         width : 100%;
         max-width : 100vw;
+        padding-bottom : 0;
     }
     .pop_type2_w {
         position : static!important;
@@ -335,4 +342,12 @@ footer .wrap {
     .sec2 {
         margin-top : 0!important;
     }
+}
+.cont {
+    display : block;
+    font-size : 14px;
+    margin-top : 20px;
+}
+.ur_dn a {
+    font-weight : 500;
 }

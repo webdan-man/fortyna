@@ -95,24 +95,24 @@
                             </ul>
                             <ul class="sld1">
                                 <li>
-                                    <img src="img/log1.png" alt>
+                                    <img src="img/log4.png" alt>
                                 </li>
                                 <li>
-                                    <img src="img/log2.png" alt>
+                                    <img src="img/log5.png" alt>
                                 </li>
                                 <li>
-                                    <img class="gazprom" src="img/log3.png" alt>
+                                    <img src="img/log6.png" alt>
                                 </li>
                             </ul>
                             <ul class="sld1">
                                 <li>
-                                    <img src="img/log1.png" alt>
+                                    <img src="img/log7.png" alt>
                                 </li>
                                 <li>
-                                    <img src="img/log2.png" alt>
+                                    <img src="img/log8.png" alt>
                                 </li>
                                 <li>
-                                    <img class="gazprom" src="img/log3.png" alt>
+                                    <img src="img/log9.png" alt>
                                 </li>
                             </ul>
                         </div>
@@ -685,6 +685,9 @@
                     <a href="tel:+74955182205">+7 (495)518-22-05</a>
                     <a href="tel:+79255182205">+7 (925) 518-22-05</a>
                 </div>
+                <span class="cont">119334<br> Ленинский проспект<br> ГОК "Спутник"<br> дом 38 офис 1415<br> ООО "Фортуна Отель Сервис".<br> Телефон/факс:
+                    <br>+7 495 9261059<br>+ 7 925 5054015
+                </span>
                 <div class="clear"></div>
                 <a class="logo_f" href="http://sdcreative.ru/" target="_blank">Site developed by:</a>
             </div>

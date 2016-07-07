@@ -2084,8 +2084,8 @@ footer h2 {
     color : #292929;
     text-transform : none;
     text-align : left;
-    margin-top : 17px;
-    margin-bottom : 38px;
+    margin-top : 5px;
+    margin-bottom : 5px;
 }
 .hos {
     font-size : 18px!important;
@@ -2748,7 +2748,7 @@ button:hover:after,
         /* height: 27px; */
         max-width : 100%;
         max-height : 100%;
-        width : 100%;
+        /* width : 100%; */
         height : initial;
         /* vertical-align: top!important; */
     }
@@ -3307,10 +3307,12 @@ button:hover:after,
     .popap form {
         margin-top : 16px;
         margin-bottom : 10px;
+        text-align : center!important;
     }
     .popap form input,
     .popap form button,
     .popap form textarea {
+        margin : 0 auto;
         margin-bottom : 21px;
         width : 77%!important;
     }
